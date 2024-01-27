@@ -1,0 +1,53 @@
+<div class="bg-zinc-900 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-[90%] mx-auto border-b border-gray-500 pb-12">
+        <div class="flex justify-between">
+            <div class="w-3/4 space-y-8">
+                <h2 class="Gilroy-Medium text-2xl md:text-4xl text-white">2 Connects</h2>
+                <div class=" flex flex-col space-y-4">
+                    <a href="tel:+91-1234567890" class="Gilroy-Medium text-lg md:text-2xl text-gray-500">123-456-7890</a>
+                    <a href="mailto:Info@mysite.com" class="Gilroy-Medium text-lg md:text-2xl text-gray-500">Info@mysite.com</a>
+                    <p class="Gilroy-Medium text-lg md:text-2xl text-gray-500">500 Terry Francine St</p>
+                    <p class="Gilroy-Medium text-lg md:text-2xl text-gray-500">San Francisco, CA 94158</p>
+                </div>
+            </div>
+            <div class="w-1/4 flex flex-col space-y-4 md:space-y-8">
+                <a routerLink="/home" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">Home</a>
+                <a routerLink="/about" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">About</a>
+                <a routerLink="/services" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">Services</a>
+                <a routerLink="/vision" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">Vision</a>
+                <button class="rounded-lg py-2 text-xs md:text-base md:py-3 px-2 md:px-6 z-20 bg-red-400 Gilroy-Medium w-fit hover:bg-transparent hover:border hover:text-white">Get Started</button>
+            </div>
+        </div>
+        <div class="flex justify-between">
+            <div class="w-3/4 space-y-4">
+                <h1 class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Subscribe to Our Newsletter</h1>
+                <div class="flex flex-col space-y-1">
+                    <p class="text-gray-500 Gilroy-Medium md:text-xl">Email *</p>
+                    <input type="email" [formControl]="email" class="border md:text-base text-xs border-red-400 bg-transparent text-white rounded-lg py-3 px-6 w-3/4" placeholder="Enter Your Email Here"/> 
+                    <p *ngIf="email?.hasError('required') && email?.touched" class="text-red-400 text-xs md:text-base">Email is required</p>
+                    <p *ngIf="email?.hasError('pattern')" class="text-red-400 text-xs md:text-base">Please enter a valid email</p>
+                </div>
+                <div class="flex flex-col space-y-1">
+                    <p class="text-gray-500 Gilroy-Medium md:text-xl">Message</p>
+                    <textarea rows="3" [formControl]="message" class="border md:text-base text-xs border-red-400 text-white bg-transparent rounded-lg py-3 px-6 w-3/4" placeholder="Message"></textarea>
+                </div>
+                <button (click)="submitForm()" class="rounded-lg py-2 text-xs md:text-base md:py-3 px-6 z-20 bg-red-400 Gilroy-Medium w-fit hover:bg-transparent hover:border hover:text-white">Submit</button>
+            </div>
+            <div class="space-y-4">
+                <h1 class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Follow Us On:</h1>
+                <div class="flex space-x-4">
+                    <a href="#" target="_blank" class="flex justify-between items-center p-[5px] cursor-pointer rounded-full bg-blue-100">
+                       <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 17V13.5V10" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 17V13.75M11 10V13.75M11 13.75C11 10 17 10 17 13.75V17" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 7.01L7.01 6.99889" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                    <a href="#" target="_blank" class="flex justify-between items-center p-[5px] cursor-pointer rounded-full bg-blue-100">
+                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 21C11 18 11 15 11 12C11 9.8125 11.5 8 15 8" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M9 13H11H15" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                    <a href="#" target="_blank" class="flex justify-between items-center p-[5px] cursor-pointer rounded-full bg-blue-100">
+                        <svg width="24px" height="24px" stroke-width="1.5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#000000"><path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="#000000" stroke-width="1.5"></path><path d="M17.5 6.51L17.51 6.49889" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="text-center Gilroy-Medium text-gray-500 pt-8">© 2035 by Vista.io. Powered and secured by Wix</p>
+</div>

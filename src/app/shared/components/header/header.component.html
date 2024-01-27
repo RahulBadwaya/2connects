@@ -1,0 +1,28 @@
+<div class="hidden md:flex header shadow-lg fixed z-50 top-0 left-0 w-full justify-between items-center p-8 px-16">
+    <div class="grid grid-cols-2 w-full">
+        <h1 class="text-white text-3xl Gilroy-Bold">2 Connects</h1>
+        <div class="flex space-x-8 items-center justify-end w-full">
+            <a routerLink="/home" routerLinkActive="active" class="text-white Gilroy-Bold text-right text-lg cursor-pointer">Home</a>
+            <a routerLink="/about" routerLinkActive="active" class="text-white Gilroy-Bold text-right text-lg cursor-pointer">About</a>
+            <a routerLink="/services" routerLinkActive="active" class="text-white Gilroy-Bold text-right text-lg cursor-pointer">Services</a>
+            <a routerLink="/vision" routerLinkActive="active" class="text-white Gilroy-Bold text-right text-lg cursor-pointer">Vision</a>
+        </div>
+    </div>
+</div>
+<div class="md:hidden bg-black flex flex-col shadow-lg fixed top-0 left-0 z-50 w-full p-6">
+    <div class="flex relative justify-between items-center">
+        <h1 class="text-white text-xl Gilroy-Bold">2 Connects</h1>
+        <svg (click)="openSidebar()" *ngIf="!isSidebarOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <svg (click)="closeSidebar()" *ngIf="isSidebarOpen" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+    </div>
+    <div [ngClass]="isSidebarOpen ? 'top-16' : 'top-[-90vh]'" class="flex tran absolute top-16 left-0 z-40 h-[90vh] bg-black w-full flex-col space-y-8 pt-16">
+        <a routerLink="/home" routerLinkActive="active" class="text-white Gilroy-Bold text-center text-lg cursor-pointer">Home</a>
+        <a routerLink="/about" routerLinkActive="active" class="text-white Gilroy-Bold text-center text-lg cursor-pointer">About</a>
+        <a routerLink="/services" routerLinkActive="active" class="text-white Gilroy-Bold text-center text-lg cursor-pointer">Services</a>
+        <a routerLink="/vision" routerLinkActive="active" class="text-white Gilroy-Bold text-center text-lg cursor-pointer">Vision</a>
+    </div>    
+</div>

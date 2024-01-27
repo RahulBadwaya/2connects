@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+    font-family: Gilroy-Medium;
+    src: url('./assets/fonts/gilroy-medium.ttf');
+}
+@font-face {
+    font-family: Gilroy-Regular;
+    src: url('./assets/fonts/gilroy-regular.ttf');
+}
+@font-face {
+    font-family: Gilroy-Bold;
+    src: url('./assets/fonts/gilroy-bold.ttf');
+}
+@font-face {
+    font-family: Gilroy-SemiBold;
+    src: url('./assets/fonts/Gilroy-SemiBold\ -\ Copy.ttf');
+}
+.Gilroy-Regular {
+    font-family: Gilroy-Regular;
+}
+.Gilroy-Medium {
+    font-family: Gilroy-Medium;
+}
+.Gilroy-SemiBold {
+    font-family: Gilroy-SemiBold;
+}
+.Gilroy-Bold {
+    font-family: Gilroy-Bold;
+}
+.div-border{
+    border: 1px solid rgba(128, 128, 128, 0.558);
+}
+.div-border-r{
+    border-right: 1px solid rgba(128, 128, 128, 0.558);
+}
+.bg{
+    background: rgba(0, 0, 0, 0.9);
+}
+.line-h{
+    line-height: 35px;
+}
+
+
