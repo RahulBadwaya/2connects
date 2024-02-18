@@ -9,6 +9,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class AppComponent {
   title = '2connects';
   constructor(private route : Router) {
-    // this.route.navigate(['/home'])
+    this.route.navigate(['/home'])
   }
 }
