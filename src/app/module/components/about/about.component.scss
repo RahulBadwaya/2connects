@@ -1,0 +1,40 @@
+
+.service-main-banner {
+    background-image: url("https://static.wixstatic.com/media/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg/v1/fill/w_980,h_550,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/c837a6_3f53cdbff83b47b19a97bd35c767333c~mv2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+}
+
+.overflow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0); /* Initial transparent background */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.service-main-banner .zoomed {
+    background-size: 700px; /* Zoom the background image up to 700px */
+}
+
+.service-main-banner.black-background .overflow-container {
+    background-color: rgba(0, 0, 0, 1); /* Full black background */
+}
+.service-banner {
+    background-image: url("https://static.wixstatic.com/media/c837a6_a56caf65f5424508937c5d7a4ced1619~mv2.jpg/v1/fill/w_469,h_630,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_a56caf65f5424508937c5d7a4ced1619~mv2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.service-banner1 {
+    background-image: url("https://static.wixstatic.com/media/c837a6_e166632dd5264456b9b5beba3bd949dd~mv2.jpg/v1/fill/w_469,h_630,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/c837a6_e166632dd5264456b9b5beba3bd949dd~mv2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

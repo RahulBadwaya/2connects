@@ -11,6 +11,7 @@ export class FooterComponent implements OnInit {
   constructor() { }
   email = new FormControl(null,[Validators.required, Validators.pattern('^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$')])
   message = new FormControl(null)
+  name = new FormControl(null,[Validators.required])
   ngOnInit(): void {
   }
 

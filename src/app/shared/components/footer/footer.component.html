@@ -1,4 +1,4 @@
-<div class="bg-zinc-900 py-16">
+<div class="bg-zinc-950 py-16">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-[90%] mx-auto border-b border-gray-500 pb-12">
         <div class="flex justify-between">
             <div class="w-3/4 space-y-8">
@@ -12,26 +12,20 @@
             </div>
             <div class="w-1/4 flex flex-col space-y-4 md:space-y-8">
                 <a routerLink="/home" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">Home</a>
-                <a routerLink="/about" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">About</a>
+                <a routerLink="/about" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">About Us</a>
                 <a routerLink="/services" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">Services</a>
-                <a routerLink="/vision" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">Vision</a>
-                <button class="rounded-lg py-2 text-xs md:text-base md:py-3 px-2 md:px-6 z-20 bg-red-400 Gilroy-Medium w-fit hover:bg-transparent hover:border hover:text-white">Get Started</button>
+                <a routerLink="/contact" class="text-gray-500 Gilroy-Medium text-lg md:text-2xl cursor-pointer">Contact Us</a>
             </div>
         </div>
         <div class="flex justify-between">
-            <div class="w-3/4 space-y-4">
-                <h1 class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Subscribe to Our Newsletter</h1>
-                <div class="flex flex-col space-y-1">
-                    <p class="text-gray-500 Gilroy-Medium md:text-xl">Email *</p>
-                    <input type="email" [formControl]="email" class="border md:text-base text-xs border-red-400 bg-transparent text-white rounded-lg py-3 px-6 w-3/4" placeholder="Enter Your Email Here"/> 
-                    <p *ngIf="email?.hasError('required') && email?.touched" class="text-red-400 text-xs md:text-base">Email is required</p>
-                    <p *ngIf="email?.hasError('pattern')" class="text-red-400 text-xs md:text-base">Please enter a valid email</p>
-                </div>
-                <div class="flex flex-col space-y-1">
-                    <p class="text-gray-500 Gilroy-Medium md:text-xl">Message</p>
-                    <textarea rows="3" [formControl]="message" class="border md:text-base text-xs border-red-400 text-white bg-transparent rounded-lg py-3 px-6 w-3/4" placeholder="Message"></textarea>
-                </div>
-                <button (click)="submitForm()" class="rounded-lg py-2 text-xs md:text-base md:py-3 px-6 z-20 bg-red-400 Gilroy-Medium w-fit hover:bg-transparent hover:border hover:text-white">Submit</button>
+            <div class="w-3/4 space-y-2">
+                <h1 class="text-gray-500 Gilroy-Medium text-2xl md:text-3xl">Our Services</h1>
+                <p class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Mobile Development</p>
+                <p class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Web Development</p>
+                <p class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Salesforce</p>
+                <p class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Design Services</p>
+                <p class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Software Testing</p>
+                <p class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Managed Services</p>
             </div>
             <div class="space-y-4">
                 <h1 class="text-gray-500 Gilroy-Medium text-lg md:text-2xl">Follow Us On:</h1>
