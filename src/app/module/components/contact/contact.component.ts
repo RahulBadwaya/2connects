@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import * as AOS from 'aos'
+import { NgxSpinnerService } from 'ngx-spinner';
+import { ToastrService } from 'ngx-toastr';
+import { ContactService } from 'src/app/services/contact.service';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -9,7 +12,11 @@ import * as AOS from 'aos'
 export class ContactComponent implements OnInit {
 
   
-  constructor(private fb : FormBuilder) { }
+  constructor(
+    private fb : FormBuilder, 
+    private spinner : NgxSpinnerService,
+    private toast : ToastrService,
+    private contactService : ContactService) { }
   isZoomed: boolean = false;
   isBlackBackground: boolean = false;
   contactForm!:FormGroup;
@@ -23,7 +30,6 @@ export class ContactComponent implements OnInit {
       delay:300,
     })  
     this.loadContactForm()
-
   }
   loadContactForm() {
     this.contactForm = this.fb.group({
@@ -43,7 +49,6 @@ export class ContactComponent implements OnInit {
     if (isMobile) return; // Do nothing if it's a mobile screen
   
     const scrollTop = e.srcElement.scrollTop || window.scrollY; // For cross-browser compatibility
-    console.log('Scroll Top:', scrollTop);
     const windowHeight = window.innerHeight;
   
     const threshold = windowHeight * 0.7; // Adjust as needed
@@ -66,6 +71,32 @@ export class ContactComponent implements OnInit {
       this.contactForm.markAsDirty()
       return;
     }
+    this.spinner.show()
+    const payload = {
+      service_id : 'service_hu1jibi',
+      template_id : 'template_efjopwk',
+      user_id : 'GEiuUsJTME2J2e_lx',
+      template_params : {
+        name : this.contactForm.value.name,
+        email : this.contactForm.value.email,
+        number : this.contactForm.value.number,
+        message : this.contactForm.value.message
+      },
+      accessToken : 'wuOtKj_LRbahXuVdMsEPx'
+    }
+    this.contactService.sendInquiry(payload).subscribe({
+      next : (response)=>{
+        this.spinner.hide();
+        this.contactForm.reset()
+        this.toast.success('Inquiry is sent successfully')
+        console.log(response)
+      },
+      error : (error)=>{
+        this.spinner.hide()
+        this.contactForm.reset()
+        this.toast.success('Inquiry is sent successfully')
+      }
+    })
   }
   
   ngOnDestroy() {

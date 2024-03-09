@@ -29,7 +29,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/aos/dist/aos.css"
+              "./node_modules/aos/dist/aos.css",
+              "./node_modules/ngx-spinner/animations/square-jelly-box.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           },
@@ -98,7 +100,9 @@
             ],
             "styles": [
               "src/styles.scss",
-              "./node_modules/aos/dist/aos.css"
+              "./node_modules/aos/dist/aos.css",
+              "./node_modules/ngx-spinner/animations/square-jelly-box.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
             "scripts": []
           }

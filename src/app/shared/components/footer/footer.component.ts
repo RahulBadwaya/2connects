@@ -7,7 +7,7 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-
+  year = new Date()
   constructor() { }
   email = new FormControl(null,[Validators.required, Validators.pattern('^[^\\s@]+@[^\\s@]+\\.[^\\s@]{2,}$')])
   message = new FormControl(null)

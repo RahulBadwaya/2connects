@@ -8,6 +8,7 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { VisionComponent } from './components/vision/vision.component';
 import { ContactComponent } from './components/contact/contact.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 const routes : Routes = [
   {
     path : '',
@@ -42,7 +43,8 @@ const routes : Routes = [
     CommonModule,
     SharedModule,
     RouterModule.forChild(routes),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ]
 })
 export class ModuleModule { }
